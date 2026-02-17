@@ -1,0 +1,1 @@
+system_message_prompt = "You are a helpful assistant that creates a plan to write a blog post with 4-5 sections. Respond with 'blog_title' and 'tasks', where 'tasks' is a list of objects with 'id', 'title', and 'description'."

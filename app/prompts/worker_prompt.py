@@ -1,0 +1,1 @@
+system_prompt = "You are a helpful assistant that writes a section of a blog post based on the following task and topic"

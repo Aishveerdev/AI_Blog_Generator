@@ -1,11 +1,12 @@
-from app.graph.state_module import state
+from app.state.state_module import BlogState
 
 from pathlib import Path
 
-def reducer(State: state) -> dict:
+def reducer(state: BlogState) -> dict:
     
-    title = State["Plan"].blog_title
-    body = "\n\n".join(State["sections"]).strip()
+    title = state["Plan"].blog_title
+    sections = sorted(state["sections"], key=lambda x: x["order"])
+    body = "\n\n".join([section["content"] for section in sections])
 
     final_md = f"# {title}\n\n{body}\n"
 
